@@ -47,7 +47,8 @@ namespace Bit.Core.Models.Request
                 case SendType.File:
                     File = new SendFileApi
                     {
-                        FileName = send.File?.FileName?.EncryptedString
+                        FileName = send.File?.FileName?.EncryptedString,
+                        Size = fileLength?.ToString() ?? "0",
                     };
                     break;
                 default:
